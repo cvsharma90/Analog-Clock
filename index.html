@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <title>Analog Clock</title>
+</head>
+<body>
+    <h1>Analog Clock</h1>
+    <div id="container">       
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+
+
+    <!-- -------------js---------------- -->
+    <script>
+       
+       function myFunc(){
+     let d  = new Date();
+
+    htime = d.getHours();
+    mtime = d.getMinutes();
+    stime = d.getSeconds()
+    hrotation = 30*htime + mtime/2;
+    mrotation = 6*mtime;
+    srotation = 6*stime;
+    hour.style.transform = `rotate(${hrotation}deg)`
+    minute.style.transform = `rotate(${mrotation}deg)`
+    second.style.transform = `rotate(${srotation}deg)`
+   
+
+ }
+
+setInterval(myFunc,1000)
+
+
+
+    </script>
+
+
+</body>
+</html>
